@@ -1,0 +1,25 @@
+//这个是闭包，在这边闭包就是一段数据类型，代表一段可执行的代码块的数据类型。
+// methodName{ String param1, def param2 -> ... } : 箭头前是参数，箭头后面是方法体，不需要写中括号
+//还有一种写法 methodName{ ... } : 无参，就是方法体
+//ext就是一个闭包，无参
+//闭包调用的方法就是 ext.call(), 或者 ext(), 如果有参数传入就是 ext.call(arg1,arg2)或者 ext(arg1,arg2)
+ext{
+
+    //groovy数据类型 Map[:],其中key会自动处理成String,自动加单引号
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.3",
+            minSdkVersion    : 16,
+            targetSdkVersion : 27,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    version = [
+            androidSupportVersion: "27.1.1"
+    ]
+
+    dependencies = [
+            'support-v7' :"com.android.support:appcompat-v7:${version["androidSupportVersion"]}"
+    ]
+}
